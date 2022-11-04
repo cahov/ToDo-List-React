@@ -1,7 +1,8 @@
 import {tasksContext, TaskProvider} from "../context/TaskContext"
 
-function TaskList({tasks}){
+function TaskList(){
     return(
+
         <ul>
             <tasksContext.Consumer>
                 {({Tasks}) => (

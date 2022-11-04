@@ -5,19 +5,12 @@ const tasksContext = createContext()
 
 
 function TaskProvider(props){
-    const [Tasks, setTasks] = useState(useLocalStorage("tareas", " "))
 
-    function AddTask(texto){
-        console.log(Tasks)
-        setTasks([...Tasks,{
-            contenido: texto,
-            estado: false
-        }])
-        console.log(Tasks)
-    }
+    const [Tasks, setTasks] = useLocalStorage("Localttv2", [])
+
 
     return(
-        <tasksContext.Provider value = {{Tasks, setTasks, AddTask}}>
+        <tasksContext.Provider value = {{Tasks, setTasks}}>
             {props.children}
         </tasksContext.Provider>
     )

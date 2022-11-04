@@ -3,13 +3,16 @@ import {tasksContext} from "../context/TaskContext"
 function TaskInput(){
     return(
     <tasksContext.Consumer>{
-        ({AddTask}) => {
+        ({Tasks, setTasks}) => {
             return (
                 <form>
                     <input type="text" id="texto" />
                     <button onClick={(e) => {
                         e.preventDefault()
-                        AddTask(document.getElementById("texto").value)
+                        setTasks([...Tasks,{
+                            contenido: document.getElementById("texto").value,
+                            estado: false
+                        }])
                     }}>+</button>
                 </form>
             )
