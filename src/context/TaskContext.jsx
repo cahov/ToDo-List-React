@@ -1,14 +1,11 @@
 import{ React, createContext, useState} from "react"
-
+import { useLocalStorage } from "../components/useLocalStorage"
 const tasksContext = createContext()
 
 
 
 function TaskProvider(props){
-    const [Tasks, setTasks] = useState([{
-        contenido: "Hola mundo122",
-        estado: false
-    }])
+    const [Tasks, setTasks] = useState(useLocalStorage("tareas", " "))
 
     function AddTask(texto){
         console.log(Tasks)
