@@ -11,12 +11,6 @@ function App() {
     <div className="App">
       <TaskInput />
       <TaskList/>
-{/*       <tasksContext.Consumer>
-        {({Tasks}) => (
-          <TaskList tasks={Tasks}/>
-        )}
-        
-      </tasksContext.Consumer> */}
     </div>
   )
 }
