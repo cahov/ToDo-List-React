@@ -2,13 +2,14 @@ import { useState } from 'react'
 import './App.css'
 import {TaskInput} from "../components/TaskInput"
 import {TaskList} from '../components/TaskList'
-import {tasksContext, TaskProvider} from "../context/TaskContext"
+import {TasksCounter} from "../components/TasksCounter"
 
 function App() {
 
 
   return (
     <div className="App">
+      <TasksCounter/>
       <TaskInput />
       <TaskList/>
     </div>
